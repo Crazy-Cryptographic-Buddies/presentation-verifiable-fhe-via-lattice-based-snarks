@@ -15,5 +15,21 @@
 	
 	Ciphertexts $c_0(Y) = a_0\cdot Y + b_0$ and $c_1(Y) = a_1 \cdot Y + b_1$.
 	
-	Addition: 
+	\textbf{Addition:} $c_\add(Y) = c_0(Y) + c_1(Y) = (a_0 + a_1)\cdot Y + (b_0 + b_1)$.
+	
+	\textbf{Multiplication:} $c_\mult(Y) = c_0(Y)\cdot c_1(Y) = a_0\cdot a_1 \cdot Y^2 + (a_0\cdot b_1 + a_1 \cdot b_0) \cdot Y + b_0\cdot b_1$.
+	
+	\textbf{Multiplication with Plaintext:} \makered{Add here}
+	
+\end{frame}
+
+\begin{frame}{Issues and Solutions}
+	Large $Q = \prod_{i = 0}^L q_i$.
+	
+	Use Chinese remainder theorem
+	\begin{equation*}
+		\R_Q = \frac{\ZZ_Q[X]}{\generation{X^N + 1}} \cong \prod_{i = 0}^L \frac{\ZZ_{q_i}[X]}{\generation{X^N + 1}}
+	\end{equation*}
+	
+	Fast multiplications of polynomials can be proceeded by using number-theoretic transform (NTT).
 \end{frame}
