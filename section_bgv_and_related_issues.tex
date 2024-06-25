@@ -1,0 +1,19 @@
+% !TEX root = main.tex
+\section{Technical Overview}
+\begin{frame}{Notations}
+	$\R = \ZZ[X] / \generation{X^N + 1}$ where $N = 2^k$ for some $k \in \NN$.
+	
+	Let $Q = \prod_{i = 0}^L q_i$ be a product of primes.
+	
+	$\R_Q = \ZZ_Q[X]/ \generation{X^N + 1}$.
+	
+	Ciphertext $\bc \in \R_Q^u$ is $\bc(Y) = c_0 + c_1 \cdot Y + \dots + c_{u - 1} \cdot Y^{u-1}$.
+\end{frame}
+
+\begin{frame}{Encryption, Decryption and Evaluations}
+	The construction follows BGV \cite{ITCS:BraGenVai12}.
+	
+	Ciphertexts $c_0(Y) = a_0\cdot Y + b_0$ and $c_1(Y) = a_1 \cdot Y + b_1$.
+	
+	Addition: 
+\end{frame}
