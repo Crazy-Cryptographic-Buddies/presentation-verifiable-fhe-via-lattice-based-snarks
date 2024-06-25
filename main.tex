@@ -1,0 +1,50 @@
+\documentclass{beamer}
+\usepackage{color,soul}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{pifont}
+\usepackage[bb=stix]{mathalpha}
+\usepackage{amsfonts}
+\usepackage{mathalfa}
+\usepackage{stmaryrd}
+\usetikzlibrary{shapes,fit}
+\usetikzlibrary{arrows, positioning, calc}
+\usetikzlibrary{trees}
+\usepackage{pifont}
+
+\usetheme{metropolis}
+
+\input{macros.tex}
+
+\title{Verifiable FHE via Lattice-based SNARKs}
+\date{26 June 2024}
+
+\AtBeginSection[]{
+	\begin{frame}
+		\vfill
+		\centering
+		\begin{beamercolorbox}[sep=8pt,center,shadow=false,rounded=true]{title}
+			\usebeamerfont{title}\insertsectionhead\par%
+		\end{beamercolorbox}
+		\vfill
+	\end{frame}
+}
+
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}{Outline}
+		\tableofcontents
+	\end{frame}
+	
+	\input{section_verifiable_fhe.tex}
+	
+\end{document}

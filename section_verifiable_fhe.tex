@@ -1,0 +1,19 @@
+% !TEX root = main.tex
+\section{Verifiable FHE and Security Properties}
+\begin{frame}{vFHE Syntax and Security}
+	
+	A vFHE contains the following algorithms:
+	\begin{itemize}
+		\item $\ParamGen(1^\lambda, f) \to \params$
+		\item $\KeyGen(1^\lambda) \to (\pk, \sk)$
+		\item $\Enc(\pk, x)\to c_x$
+		\item $\Eval(\pk, x)\to (c_y, \pi_y)$
+		\item $\Verify(\pk, c_x, c_y, \pi_y)\to \{0,1\}$
+		\item $\Dec(\sk, c_y)\to y$
+	\end{itemize}
+	
+	A secure vFHE must satisfy correctness, \textbf{completeness}, security (CPA) and \textbf{soundness}.
+	\begin{itemize}
+		\item \textbf{Soundness} prevent adversary to return $(c_y, \pi_y)$ s.t. $\Verify(c_x, c_y, \pi_y) = 1$ and $\Dec(\sk, c_y) \not= f(x)$.
+	\end{itemize}
+\end{frame}
