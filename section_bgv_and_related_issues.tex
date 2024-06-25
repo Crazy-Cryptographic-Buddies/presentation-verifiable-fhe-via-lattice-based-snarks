@@ -23,7 +23,7 @@
 	
 \end{frame}
 
-\begin{frame}{Issues and Solutions}
+\begin{frame}{Chinese Remaindering Theorem}
 	Large $Q = \prod_{i = 0}^L q_i$.
 	
 	Use Chinese remainder theorem
@@ -32,4 +32,20 @@
 	\end{equation*}
 	
 	Fast multiplications of polynomials can be proceeded by using number-theoretic transform (NTT).
+\end{frame}
+
+\begin{frame}{Relinearization}
+	\textbf{Purpose:} $c(Y) = c_0 + c_1 \cdot Y + c_2 \cdot Y^2 \Rightarrow c'(Y) = c'_0 + c'_1 \cdot Y$.
+	
+	\makered{arg1}
+\end{frame}
+
+\begin{frame}{Modulus Switching}
+	Let $Q^{(k)} = \prod_{j = 0}^k q_j$.
+	
+	For ciphertext $c(Y) \in \R_{Q^{(i)}}[Y]$, switch to the ciphertext $c'(Y) \in \R_{Q^{(i-1)}}[Y]$ where $Q^{(i-1)} = Q^{(i)} / q_i$ s.t. $c(Y)$ and $c'(Y)$ are equivalent modulo $t$.
+	
+	Let $c(Y) = c_0 + c_1\cdot Y$.
+	
+	Then, $c'(Y) = c'_0 + c'_1 \cdot Y$ where $c'_l = (c_l + \delta_l)/q_i$ where $\delta_l = t (-c_l/t \mod q_i)$ for $l \in \{0,1\}$.
 \end{frame}
