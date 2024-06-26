@@ -37,7 +37,15 @@
 \begin{frame}{Relinearization}
 	\textbf{Purpose:} $c(Y) = c_0 + c_1 \cdot Y + c_2 \cdot Y^2 \Rightarrow c'(Y) = c'_0 + c'_1 \cdot Y$.
 	
-	\makered{arg1}
+	\textbf{Method:}
+	\begin{itemize}
+		\item Encrypt $\sk^2$ as $\rlk(Y) = \rlk_0 + \rlk_1 \cdot Y$. 
+		\item Compute $c'_j = c_j + c_2 \cdot \rlk_j$ for $j \in \{0,1\}$.
+	\end{itemize} 
+	
+	$\Rightarrow$ This may incurs a large noise term.
+	
+	\textbf{Alternative method:} Decompose $c_2$ into RNS base by using fast base extension $\FastBaseExt$ and view $\rlk_0, \rlk_1$ as vectors. Then, compute $c'_j = c_j + \innerproduct{\D_{Q^{(i)}}(c_2)}{\rlk_j}$ for $j \in \{0,1\}$.
 \end{frame}
 
 \begin{frame}{Modulus Switching}

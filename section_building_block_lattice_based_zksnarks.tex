@@ -1,2 +1,13 @@
 % !TEX root = main.tex
-\section{Building Block: Lattice-Based SNARKs}
+\section{Building Block: SNARKs}
+
+\begin{frame}{SNARKs}
+	\textbf{Succinct Non-Interactive Arguments of Knowledge (SNARKs):} Proving satisfaction of a circuit $\Circuit$ receiving as public input $\bx$ and a private input $\bw$. 
+	\begin{itemize}
+		\item A SNARK for $\Circuit$, on inputs $\bx$ and $\bw$, returns a proof $\pi$.
+		\item Satisfying completeness and knowledge soundness.
+		\item $\size{\pi}$ is sublinear in $\size{\bx}$.
+	\end{itemize}
+	
+	\textbf{Instantiation:} SNARKs for linear-only encryption \cite{TCC:BCIPO13}.
+\end{frame}
